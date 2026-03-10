@@ -65,6 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 email
               )}`,
                 { method: "DELETE", cache: "no-store" }
+            );
+            const result = await response.json();
             if (response.ok) {
               messageDiv.textContent = result.message;
               messageDiv.className = "success";
